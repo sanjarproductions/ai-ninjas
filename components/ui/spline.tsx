@@ -16,8 +16,8 @@ export function SplineScene({ scene, className }: SplineSceneProps) {
       <div className={`w-full h-full flex items-center justify-center ${className}`}>
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-sm text-gray-500">Loading 3D Scene...</p>
-          <p className="text-xs text-gray-400 mt-2">Scene: {scene}</p>
+          {/* <p className="text-sm text-gray-500">Loading 3D Scene...</p>  */}
+          {/* <p className="text-xs text-gray-400 mt-2">Scene: {scene}</p>  */}
         </div>
       </div>
     )
@@ -29,8 +29,8 @@ export function SplineScene({ scene, className }: SplineSceneProps) {
         <div className={`w-full h-full flex items-center justify-center ${className}`}>
           <div className="text-center">
             <div className="w-16 h-16 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-sm text-gray-500">Loading 3D Scene...</p>
-            <p className="text-xs text-gray-400 mt-2">Scene: {scene}</p>
+            {/* <p className="text-sm text-gray-500">Loading 3D Scene...</p> */}
+            {/* <p className="text-xs text-gray-400 mt-2">Scene: {scene}</p> */}
           </div>
         </div>
       }

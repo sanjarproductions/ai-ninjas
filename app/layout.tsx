@@ -4,9 +4,11 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'AI Ninjas',
+  description: 'Master the Art of AI. A step-by-step AI training program designed like martial arts — from beginner to mastery, with real coding skills and real-world impact.',
+  icons: {
+    icon: 'logos/small-icon.png',
+  },
 }
 
 export default function RootLayout({
