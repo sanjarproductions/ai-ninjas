@@ -16,7 +16,7 @@ const storyBlocks = [
   {
     numeral: "II",
     title: "A Visionary Foundation",
-    text: "Founded by Syed Yasin, a globally respected AI researcher and educator. With over two decades of groundbreaking work in machine learning, explainable AI, and AGI, Syed brought patented innovations and a bold, human-centric approach to AI education.",
+    text: "Founded by Syed Yasin, a respected AI researcher and educator. With over two decades of groundbreaking work in machine learning, explainable AI, and AGI, Syed brought patented innovations and a bold, human-centric approach to AI education.",
   },
   {
     numeral: "III",
