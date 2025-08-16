@@ -29,7 +29,7 @@ export const staticBlogPosts: BlogPostData[] = [
     category: "AI Fundamentals",
     author: "AI Ninjas Team",
     date: "January 15, 2025",
-    image: "/placeholder.svg?height=400&width=800&text=Featured+Article",
+    image: "/blog-photos/The Future of AI Education.jpg?height=400&width=800",
     readTime: "8 min read",
     content: `
 # The Crisis in AI Education
@@ -81,7 +81,7 @@ The question isn't whether AI will transform education—it's whether we'll adap
     category: "AI Fundamentals",
     author: "AI Ninjas Team",
     date: "January 12, 2025",
-    image: "/placeholder.svg?height=400&width=800&text=Neural+Networks",
+    image: "/blog-photos/Understanding Neural Networks.png?height=400&width=800",
     readTime: "6 min read",
     content: `
 # What Are Neural Networks?
@@ -163,7 +163,7 @@ The journey from beginner to AI practitioner starts with understanding these fun
     category: "Ethics",
     author: "AI Ninjas Team",
     date: "January 10, 2025",
-    image: "/placeholder.svg?height=400&width=800&text=AI+Ethics",
+    image: "/blog-photos/Ethics in AI.jpg?height=400&width=800AI+Ethics",
     readTime: "7 min read",
     content: `
 # The Ethical Imperative in AI
@@ -288,7 +288,7 @@ The choices we make today about AI ethics will shape the world our children inhe
     category: "Machine Learning",
     author: "AI Ninjas Team",
     date: "January 8, 2025",
-    image: "/placeholder.svg?height=400&width=800&text=Computer+Vision",
+    image: "/blog-photos/Computer Vision in Practice.jpg?height=400&width=800Computer+Vision",
     readTime: "9 min read",
     content: `
 # Teaching Machines to See
@@ -442,7 +442,7 @@ The future is visual, and computer vision is the key to unlocking it.
     category: "Tutorials",
     author: "AI Ninjas Team",
     date: "January 5, 2025",
-    image: "/placeholder.svg?height=400&width=800&text=ML+Math",
+    image: "/blog-photos/The Mathematics Behind Machine Learning.jpg?height=400&width=800ML+Math",
     readTime: "10 min read",
     content: `
 # The Mathematical Foundation of Machine Learning

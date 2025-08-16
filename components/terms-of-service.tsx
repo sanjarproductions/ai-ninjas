@@ -14,7 +14,7 @@ interface TermsOfServiceProps {
 interface Section {
   id: string
   title: string
-  icon: React.ComponentType<{ size?: number; className?: string }>
+  icon: React.ComponentType<{ size?: number | string; className?: string }>
 }
 
 const sections: Section[] = [
@@ -342,7 +342,7 @@ useEffect(() => {
               >
                 <p>
                   <strong>Our Content:</strong> All course materials, videos, text, graphics, logos, and software
-                  provided through our Services are owned by AI Ninjas or our licensors and are protected by copyright,
+                  provided through our Services are owned by Neuralpath Dynamics LLP or our licensors and are protected by copyright,
                   trademark, and other intellectual property laws.
                 </p>
                 <p>
@@ -412,7 +412,7 @@ useEffect(() => {
                   guarantee specific learning outcomes, job placement, or career advancement results.
                 </p>
                 <p>
-                  <strong>Limitation of Damages:</strong> To the fullest extent permitted by law, AI Ninjas shall not be
+                  <strong>Limitation of Damages:</strong> To the fullest extent permitted by law, Neuralpath Dynamics LLP shall not be
                   liable for any indirect, incidental, special, consequential, or punitive damages, including but not
                   limited to loss of profits, data, or business opportunities.
                 </p>

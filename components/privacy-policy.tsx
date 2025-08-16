@@ -14,7 +14,7 @@ interface PrivacyPolicyProps {
 interface Section {
   id: string
   title: string
-  icon: React.ComponentType<{ size?: number; className?: string }>
+  icon: React.ComponentType<{ size?: number | string; className?: string }>
 }
 
 const sections: Section[] = [
@@ -36,12 +36,12 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
   const [activeSection, setActiveSection] = useState<string>("introduction")
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
 
- useEffect(() => {
-  window.scrollTo({ top: 0, behavior: 'auto' })
-  if (contentRef.current) {
-    contentRef.current.scrollTo({ top: 0, behavior: 'auto' })
-  }
-}, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+    if (contentRef.current) {
+      contentRef.current.scrollTo({ top: 0, behavior: 'auto' })
+    }
+  }, [])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -96,9 +96,8 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
         <div>
           <Link
             href="/"
-            className={`inline-flex items-center gap-2 font-mono text-sm transition-colors duration-300 mb-2 ${
-              isDark ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
-            }`}
+            className={`inline-flex items-center gap-2 font-mono text-sm transition-colors duration-300 mb-2 ${isDark ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
+              }`}
           >
             <ArrowLeft size={16} />
             Back to Home
@@ -107,9 +106,8 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
         </div>
         <button
           onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
-          className={`p-2 rounded-lg transition-colors duration-300 ${
-            isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"
-          }`}
+          className={`p-2 rounded-lg transition-colors duration-300 ${isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"
+            }`}
         >
           <Menu size={20} />
         </button>
@@ -131,9 +129,8 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
           <div className={`hidden lg:block p-6 border-b ${isDark ? "border-gray-800" : "border-gray-200"}`}>
             <Link
               href="/"
-              className={`inline-flex items-center gap-2 font-mono text-sm transition-colors duration-300 mb-4 ${
-                isDark ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
-              }`}
+              className={`inline-flex items-center gap-2 font-mono text-sm transition-colors duration-300 mb-4 ${isDark ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
+                }`}
             >
               <ArrowLeft size={16} />
               Back to Home
@@ -151,9 +148,8 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
             <span className={`font-mono text-sm ${isDark ? "text-gray-400" : "text-gray-600"}`}>Navigation</span>
             <button
               onClick={() => setIsMobileSidebarOpen(false)}
-              className={`p-2 rounded-lg transition-colors duration-300 ${
-                isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"
-              }`}
+              className={`p-2 rounded-lg transition-colors duration-300 ${isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"
+                }`}
             >
               <X size={20} />
             </button>
@@ -168,15 +164,14 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className={`flex items-center gap-3 w-full text-left font-mono text-sm transition-all duration-300 py-3 px-3 rounded ${
-                      activeSection === section.id
+                    className={`flex items-center gap-3 w-full text-left font-mono text-sm transition-all duration-300 py-3 px-3 rounded ${activeSection === section.id
                         ? isDark
                           ? "bg-white/10 text-white"
                           : "bg-black/10 text-black"
                         : isDark
                           ? "text-gray-400 hover:text-white hover:bg-white/5"
                           : "text-gray-600 hover:text-black hover:bg-black/5"
-                    }`}
+                      }`}
                   >
                     <Icon size={16} />
                     <span className="truncate">{section.title}</span>
@@ -322,6 +317,17 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
                   <strong>GDPR Compliance:</strong> We adhere to the General Data Protection Regulation (GDPR) and other
                   applicable data protection laws. We collect and process personal information only when we have a
                   lawful basis to do so, and we ensure that your rights as a data subject are protected at all times.
+                </p>
+              </div>
+
+              <div className="mt-6 p-4 border-l-4 border-blue-500 bg-blue-50/10">
+                <p className={`font-mono text-sm sm:text-base ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+                  <strong>Children’s Online Privacy Protection:</strong> If you're under 13, we require verifiable parental consent before you can create an account or submit any personal information. Parents or guardians will: <br />
+                  •⁠  ⁠Receive a consent form via email <br />
+                  •⁠  ⁠Be able to review what data we collect <br />
+                  •⁠  ⁠Have the right to delete their child’s account and data at any time <br />
+                  We follow the Children’s Online Privacy Protection Act (COPPA) to ensure full compliance.
+
                 </p>
               </div>
             </section>
@@ -737,9 +743,7 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
                 </div>
 
                 <p>
-                  <strong>Data Protection Authority:</strong> If you are located in the European Union or other regions
-                  with data protection authorities, you have the right to lodge a complaint with the relevant
-                  supervisory authority if you believe we have not addressed your privacy concerns adequately.
+                  <strong>Data Protection Authority:</strong> If you are located in the European Union or other regions with data protection authorities, you have the right to lodge a complaint with your local supervisory authority if you believe your data protection rights have been violated. We encourage you to contact us first at <a href="mailto:privacy@aininjas.com" className="text-blue-600 visited:text-purple-600 underline">privacy@aininjas.com</a>, and we’ll do our best to resolve your concerns.
                 </p>
               </div>
             </section>
@@ -753,11 +757,10 @@ export function PrivacyPolicy({ isDark = true }: PrivacyPolicyProps) {
                     behavior: "smooth",
                   })
                 }}
-                className={`inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border font-mono text-sm transition-colors duration-300 ${
-                  isDark
+                className={`inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border font-mono text-sm transition-colors duration-300 ${isDark
                     ? "border-white text-white hover:bg-white hover:text-black"
                     : "border-black text-black hover:bg-black hover:text-white"
-                }`}
+                  }`}
               >
                 Back to Top
               </button>

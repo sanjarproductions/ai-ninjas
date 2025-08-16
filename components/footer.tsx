@@ -10,7 +10,7 @@ interface FooterProps {
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "FAQs", href: "#faq" },
+  // { name: "FAQs", href: "#faq" },
   { name: "Privacy", href: "/privacy" },
   { name: "Terms", href: "/terms" },
 ]
