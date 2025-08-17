@@ -13,7 +13,14 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      content: "Info@aininjas.com",
+      content: (
+        <a 
+          href="mailto:info@aininjas.com" 
+          className="hover:text-blue-500 transition-colors duration-200 underline"
+        >
+          info@aininjas.com
+        </a>
+      ),
       description: "We'll respond within 24 hours",
     },
     {
@@ -51,7 +58,7 @@ export default function ContactPage() {
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Contact Form */}
-            <div>
+            {/* <div>
               <div className="mb-8">
                 <h2 className={`text-2xl md:text-3xl font-bold font-sans mb-4 ${isDark ? "text-white" : "text-black"}`}>
                   Send us a Message
@@ -61,7 +68,7 @@ export default function ContactPage() {
                 </p>
               </div>
               <ContactForm isDark={isDark} />
-            </div>
+            </div> */}
 
             {/* Contact Information */}
             <div className="space-y-8">
