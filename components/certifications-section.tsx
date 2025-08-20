@@ -34,7 +34,7 @@ export function CertificationsSection({ isDark }: CertificationSectionProps) {
       icon: <Trophy className="w-8 h-8" />,
       color: isDark ? "from-amber-600 to-amber-800" : "from-amber-500 to-amber-700",
       borderColor: isDark ? "border-amber-500/30" : "border-amber-400/30",
-      items: ["The Optimizer Micro Credential", "The AI Ninja Micro Credential"],
+      items: ["The Explorer Micro Crential", "The Optimizer Micro Credential", "The AI Ninja Micro Credential",],
     },
   ]
 
@@ -114,14 +114,7 @@ export function CertificationsSection({ isDark }: CertificationSectionProps) {
                   ))}
                 </div>
 
-                {/* Hover Effect Indicator */}
-                <div
-                  className={`absolute bottom-4 right-4 transition-opacity duration-300 ${
-                    hoveredCard === index ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${cert.color}`}></div>
-                </div>
+                
               </div>
             </div>
           ))}

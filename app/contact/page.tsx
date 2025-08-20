@@ -14,10 +14,7 @@ export default function ContactPage() {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
       content: (
-        <a 
-          href="mailto:info@aininjas.com" 
-          className="hover:text-blue-500 transition-colors duration-200 underline"
-        >
+        <a href="mailto:info@aininjas.com" className="hover:text-blue-500 transition-colors duration-200 underline">
           info@aininjas.com
         </a>
       ),
